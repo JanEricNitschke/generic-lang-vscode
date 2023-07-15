@@ -1,10 +1,10 @@
 {
-    "name": "lox-language",
-    "displayName": "Lox Language",
-    "description": "Syntax highlighting for everyone's favorite interpreted learning-language",
-    "version": "0.0.4",
-    "publisher": "dberezin",
-    "author": "dberezin",
+    "name": "rlox-language",
+    "displayName": "rLox Language",
+    "description": "Syntax highlighting for rLox",
+    "version": "0.0.1",
+    "publisher": "JanEricNitschke",
+    "author": "JanEricNitschke",
     "icon": "images/CILogo.png",
     "engines": {
         "vscode": "^1.24.0"
@@ -36,7 +36,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/danman113/lox-language.git"
+        "url": "https://github.com/JanEricNitschke/lox-language.git"
     },
     "keywords": [
         "lox",
@@ -47,7 +47,7 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/danman113/lox-language/issues"
+        "url": "https://github.com/JanEricNitschke/lox-language/issues"
     },
-    "homepage": "https://github.com/danman113/lox-language#readme"
+    "homepage": "https://github.com/JanEricNitschke/lox-language#readme"
 }

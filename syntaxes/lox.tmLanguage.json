@@ -22,6 +22,9 @@
 		},
 		{
 			"include": "#digits"
+		},
+		{
+			"include": "#operators"
 		}
 	],
 	"repository": {
@@ -29,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.lox",
-					"match": "\\b(if|else|while|for|return|and|or)\\b"
+					"match": "\\b(if|else|while|for|return|and|or|in|break|continue)\\b"
 				},
 				{
 					"name": "constant.language.null.lox",
@@ -40,8 +43,8 @@
 					"match": "\\b(true|false)\\b"
 				},
 				{
-					"name": "support.function.builtin.lox",
-					"match": "\\b(print)\\b"
+					"name": "support.function.builtin.xlox",
+					"match": "\\b(print|str|type|clock|sqrt|input|int|float|rng|len)\\b"
 				},
 				{
 					"name": "variable.language.this.lox",
@@ -56,7 +59,7 @@
 		"statements": {
 			"patterns": [
 				{
-					"match": "\\b(var)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"match": "\\b(var|const)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
 					"captures": {
 						"1": {
 							"name": "storage.type.lox"
@@ -70,10 +73,10 @@
 					"match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9_,\\s]*)\\)",
 					"captures": {
 						"1": {
-							"name":"storage.type.function.lox"
+							"name": "storage.type.function.lox"
 						},
 						"2": {
-							"name":"entity.name.function.lox"
+							"name": "entity.name.function.lox"
 						},
 						"3": {
 							"patterns": [
@@ -137,8 +140,24 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.double-slash.lox",
-					"match": "\\/\\/.*"
+					"name": "comment.line.number-sign",
+					"match": "#.*"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"match": "(==|!=|<=?|>=?)",
+					"name": "keyword.operator.comparison.lox"
+				},
+				{
+					"match": "=|\\*=|-=|\\+=|\\^=|\\|=|%=|&=",
+					"name": "keyword.operator.assignment.lox"
+				},
+				{
+					"match": "(\\+|-|\\*|\\/|\\^|\\*\\*|\\||%|&|\\/\\/)",
+					"name": "keyword.operator.arithmetic.lox"
 				}
 			]
 		}
