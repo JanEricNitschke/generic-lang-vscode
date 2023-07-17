@@ -32,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.lox",
-					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch)\\b"
+					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default)\\b"
 				},
 				{
 					"name": "constant.language.null.lox",
