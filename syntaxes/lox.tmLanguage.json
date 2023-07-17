@@ -32,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.lox",
-					"match": "\\b(if|else|while|for|return|and|or|in|break|continue)\\b"
+					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch)\\b"
 				},
 				{
 					"name": "constant.language.null.lox",
@@ -44,7 +44,7 @@
 				},
 				{
 					"name": "support.function.builtin.xlox",
-					"match": "\\b(print|str|type|clock|sqrt|input|int|float|rng|len)\\b"
+					"match": "\\b(print|str|type|clock|sqrt|input|int|float|rng|len|sleep)\\b"
 				},
 				{
 					"name": "variable.language.this.lox",
