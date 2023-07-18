@@ -44,7 +44,7 @@
 				},
 				{
 					"name": "support.function.builtin.generic-lang",
-					"match": "\\b(print|str|type|clock|sqrt|input|int|float|rng|len|sleep)\\b"
+					"match": "\\b(print|str|type|clock|sqrt|input|int|float|rng|len|sleep|assert)\\b"
 				},
 				{
 					"name": "variable.language.this.generic-lang",
