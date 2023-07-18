@@ -1,4 +1,4 @@
-# Lox Language
+# Generic Language
 Syntax highlighting for [generic-lang](https://github.com/JanEricNitschke/generic-lang)!
 
 ![Screenshot](images/screenshot.png)
