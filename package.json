@@ -1,7 +1,7 @@
 {
-    "name": "rlox-language",
-    "displayName": "rLox Language",
-    "description": "Syntax highlighting for rLox",
+    "name": "generic-lang",
+    "displayName": "generic Language",
+    "description": "Syntax highlighting for generic-lang",
     "version": "0.0.1",
     "publisher": "JanEricNitschke",
     "author": "JanEricNitschke",
@@ -15,39 +15,37 @@
     "contributes": {
         "languages": [
             {
-                "id": "lox",
+                "id": "generic-lang",
                 "aliases": [
-                    "lox",
-                    "lox"
+                    "generic-lang"
                 ],
                 "extensions": [
-                    ".lox"
+                    ".gen"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "lox",
-                "scopeName": "source.lox",
-                "path": "./syntaxes/lox.tmLanguage.json"
+                "language": "generic-lang",
+                "scopeName": "source.generic-lang",
+                "path": "./syntaxes/generic-lang.tmLanguage.json"
             }
         ]
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/JanEricNitschke/lox-language.git"
+        "url": "https://github.com/JanEricNitschke/generic-lang.git"
     },
     "keywords": [
-        "lox",
-        "lox-language",
+        "generic-lang",
         "vscode",
         "vscode-extension",
         "vscode-language"
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/JanEricNitschke/lox-language/issues"
+        "url": "https://github.com/JanEricNitschke/generic-lang/issues"
     },
-    "homepage": "https://github.com/JanEricNitschke/lox-language#readme"
+    "homepage": "https://github.com/JanEricNitschke/generic-lang#readme"
 }

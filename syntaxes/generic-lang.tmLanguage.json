@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "lox",
+	"name": "generic-lang",
 	"patterns": [
 		{
 			"include": "#comments"
@@ -31,27 +31,27 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.control.lox",
+					"name": "keyword.control.generic-lang",
 					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default)\\b"
 				},
 				{
-					"name": "constant.language.null.lox",
+					"name": "constant.language.null.generic-lang",
 					"match": "\\b(nil)\\b"
 				},
 				{
-					"name": "constant.language.boolean.lox",
+					"name": "constant.language.boolean.generic-lang",
 					"match": "\\b(true|false)\\b"
 				},
 				{
-					"name": "support.function.builtin.xlox",
+					"name": "support.function.builtin.generic-lang",
 					"match": "\\b(print|str|type|clock|sqrt|input|int|float|rng|len|sleep)\\b"
 				},
 				{
-					"name": "variable.language.this.lox",
+					"name": "variable.language.this.generic-lang",
 					"match": "\\b(this)\\b"
 				},
 				{
-					"name": "variable.language.super.lox",
+					"name": "variable.language.super.generic-lang",
 					"match": "\\b(super)\\b"
 				}
 			]
@@ -62,10 +62,10 @@
 					"match": "\\b(var|const)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
 					"captures": {
 						"1": {
-							"name": "storage.type.lox"
+							"name": "storage.type.generic-lang"
 						},
 						"2": {
-							"name": "support.variable.lox"
+							"name": "support.variable.generic-lang"
 						}
 					}
 				},
@@ -73,16 +73,16 @@
 					"match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9_,\\s]*)\\)",
 					"captures": {
 						"1": {
-							"name": "storage.type.function.lox"
+							"name": "storage.type.function.generic-lang"
 						},
 						"2": {
-							"name": "entity.name.function.lox"
+							"name": "entity.name.function.generic-lang"
 						},
 						"3": {
 							"patterns": [
 								{
 									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
-									"name": "variable.parameter.lox"
+									"name": "variable.parameter.generic-lang"
 								}
 							]
 						}
@@ -92,16 +92,16 @@
 					"match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s*(<)\\s*([A-Za-z_][A-Za-z0-9_]*))?\\b",
 					"captures": {
 						"1": {
-							"name": "storage.type.class.lox"
+							"name": "storage.type.class.generic-lang"
 						},
 						"2": {
-							"name": "entity.name.type.class.lox"
+							"name": "entity.name.type.class.generic-lang"
 						},
 						"3": {
-							"name": "storage.modifier.lox"
+							"name": "storage.modifier.generic-lang"
 						},
 						"4": {
-							"name": "entity.name.type.class.lox"
+							"name": "entity.name.type.class.generic-lang"
 						}
 					}
 				}
@@ -111,12 +111,12 @@
 			"patterns": [
 				{
 					"match": "([A-Za-z_][A-Za-z0-9_]*)\\(",
-					"name": "support.function.lox"
+					"name": "support.function.generic-lang"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.lox",
+			"name": "string.quoted.double.generic-lang",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": []
@@ -124,7 +124,7 @@
 		"digits": {
 			"patterns": [
 				{
-					"name": "constant.numeric.lox",
+					"name": "constant.numeric.generic-lang",
 					"match": "\\b[0-9]+(?:.[0-9]+)?\\b"
 				}
 			]
@@ -132,7 +132,7 @@
 		"ident": {
 			"patterns": [
 				{
-					"name": "variable.other.readwrite.lox",
+					"name": "variable.other.readwrite.generic-lang",
 					"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
 				}
 			]
@@ -149,18 +149,18 @@
 			"patterns": [
 				{
 					"match": "(==|!=|<=?|>=?)",
-					"name": "keyword.operator.comparison.lox"
+					"name": "keyword.operator.comparison.generic-lang"
 				},
 				{
 					"match": "=|\\*=|-=|\\+=|\\^=|\\|=|%=|&=",
-					"name": "keyword.operator.assignment.lox"
+					"name": "keyword.operator.assignment.generic-lang"
 				},
 				{
 					"match": "(\\+|-|\\*|\\/|\\^|\\*\\*|\\||%|&|\\/\\/)",
-					"name": "keyword.operator.arithmetic.lox"
+					"name": "keyword.operator.arithmetic.generic-lang"
 				}
 			]
 		}
 	},
-	"scopeName": "source.lox"
+	"scopeName": "source.generic-lang"
 }
