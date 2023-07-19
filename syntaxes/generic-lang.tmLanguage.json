@@ -32,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default)\\b"
+					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default|unless|until)\\b"
 				},
 				{
 					"name": "constant.language.null.generic-lang",
