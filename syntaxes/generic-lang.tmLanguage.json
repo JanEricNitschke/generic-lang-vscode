@@ -36,7 +36,7 @@
 				},
 				{
 					"name": "constant.language.null.generic-lang",
-					"match": "\\b(nil)\\b"
+					"match": "\\b(nil|StopIteration)\\b"
 				},
 				{
 					"name": "constant.language.boolean.generic-lang",
