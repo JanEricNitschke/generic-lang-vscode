@@ -32,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default|unless|until|import|from)\\b"
+					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await)\\b"
 				},
 				{
 					"name": "constant.language.null.generic-lang",
@@ -53,6 +53,10 @@
 				{
 					"name": "variable.language.super.generic-lang",
 					"match": "\\b(super)\\b"
+				},
+				{
+					"name": "variable.language.__name__.generic-lang",
+					"match": "\\b(__name__)\\b"
 				}
 			]
 		},
