@@ -32,7 +32,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await)\\b"
+					"match": "\\b(if|else|while|for|foreach|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await)\\b"
+				},
+				{
+					"name": "keyword.control.decorator.generic-lang",
+					"match": "@"
 				},
 				{
 					"name": "constant.language.null.generic-lang",
@@ -83,6 +87,22 @@
 							"name": "entity.name.function.generic-lang"
 						},
 						"3": {
+							"patterns": [
+								{
+									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+									"name": "variable.parameter.generic-lang"
+								}
+							]
+						}
+					}
+				},
+				{
+					"match": "(->)\\s*\\(([A-Za-z0-9_,\\s]*)\\)",
+					"captures": {
+						"1": {
+							"name": "storage.type.lambda.generic-lang"
+						},
+						"2": {
 							"patterns": [
 								{
 									"match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
