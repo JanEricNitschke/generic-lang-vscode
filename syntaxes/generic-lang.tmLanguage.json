@@ -35,7 +35,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|foreach|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await|try|catch|finally)\\b"
+					"match": "\\b(if|else|while|for|foreach|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await|try|catch|finally|throw)\\b"
 				},
 				{
 					"name": "keyword.control.decorator.generic-lang",
