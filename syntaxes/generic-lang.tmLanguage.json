@@ -25,6 +25,9 @@
 		},
 		{
 			"include": "#operators"
+		},
+		{
+			"include": "#labels"
 		}
 	],
 	"repository": {
@@ -32,7 +35,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|foreach|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await)\\b"
+					"match": "\\b(if|else|while|for|foreach|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await|try|catch|finally)\\b"
 				},
 				{
 					"name": "keyword.control.decorator.generic-lang",
@@ -51,16 +54,8 @@
 					"match": "\\b(print|str|type|clock|sqrt|input|int|is_int|float|rng|len|sleep|assert)\\b"
 				},
 				{
-					"name": "variable.language.this.generic-lang",
-					"match": "\\b(this)\\b"
-				},
-				{
-					"name": "variable.language.super.generic-lang",
-					"match": "\\b(super)\\b"
-				},
-				{
-					"name": "variable.language.__name__.generic-lang",
-					"match": "\\b(__name__)\\b"
+					"name": "variable.language.generic-lang",
+					"match": "\\b(this|super|__name__)\\b"
 				}
 			]
 		},
@@ -172,7 +167,7 @@
 		"operators": {
 			"patterns": [
 				{
-					"match": "(==|!=|<=?|>=?)",
+					"match": "(==|!=|<=|>=|<|>)",
 					"name": "keyword.operator.comparison.generic-lang"
 				},
 				{
@@ -182,6 +177,18 @@
 				{
 					"match": "(\\+|-|\\*|\\/|\\^|\\*\\*|\\||%|&|\\/\\/)",
 					"name": "keyword.operator.arithmetic.generic-lang"
+				},
+				{
+					"match": "\\?|:",
+					"name": "keyword.operator.ternary.generic-lang"
+				}
+			]
+		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name.label.generic-lang",
+					"match": "'[A-Za-z_][A-Za-z0-9_]*\\b"
 				}
 			]
 		}
