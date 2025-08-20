@@ -3,6 +3,9 @@
 	"name": "generic-lang",
 	"patterns": [
 		{
+			"include": "#strings"
+		},
+		{
 			"include": "#comments"
 		},
 		{
@@ -16,9 +19,6 @@
 		},
 		{
 			"include": "#ident"
-		},
-		{
-			"include": "#strings"
 		},
 		{
 			"include": "#digits"
@@ -184,10 +184,49 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.generic-lang",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": []
+			"patterns": [
+				{
+					"name": "string.quoted.double.interpolated.generic-lang",
+					"begin": "(f)(\")",
+					"beginCaptures": {
+						"1": {
+							"name": "storage.type.string.f-prefix.generic-lang"
+						},
+						"2": {
+							"name": "string.quoted.double.generic-lang"
+						}
+					},
+					"end": "\"",
+					"patterns": [
+						{
+							"begin": "\\$\\{",
+							"beginCaptures": {
+								"0": {
+									"name": "keyword.control.interpolation.generic-lang"
+								}
+							},
+							"end": "\\}",
+							"endCaptures": {
+								"0": {
+									"name": "keyword.control.interpolation.generic-lang"
+								}
+							},
+							"name": "meta.interpolation.generic-lang",
+							"patterns": [
+								{
+									"include": "$self"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "string.quoted.double.generic-lang",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": []
+				}
+			]
 		},
 		"digits": {
 			"patterns": [
