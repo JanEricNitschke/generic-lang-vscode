@@ -59,6 +59,38 @@
 				}
 			]
 		},
+		"operators": {
+			"patterns": [
+				{
+					"match": "\\.\\.<|\\.\\.=",
+					"name": "keyword.operator.range.generic-lang"
+				},
+				{
+					"match": "(?<!\\?)\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(:)\\s*([A-Za-z_][A-Za-z0-9_]*)\\b",
+					"captures": {
+						"1": { "name": "variable.other.readwrite.generic-lang" },
+						"2": { "name": "keyword.operator.rational.generic-lang" },
+						"3": { "name": "variable.other.readwrite.generic-lang" }
+					}
+				},
+				{
+					"match": "(==|!=|<=|>=|<|>)",
+					"name": "keyword.operator.comparison.generic-lang"
+				},
+				{
+					"match": "=|\\*=|-=|\\+=|\\^=|\\|=|%=|&=",
+					"name": "keyword.operator.assignment.generic-lang"
+				},
+				{
+					"match": "(\\+|-|\\*|\\/|\\^|\\*\\*|\\||%|&|\\/\\/)",
+					"name": "keyword.operator.arithmetic.generic-lang"
+				},
+				{
+					"match": "\\?|:",
+					"name": "keyword.operator.ternary.generic-lang"
+				}
+			]
+		},
 		"statements": {
 			"patterns": [
 				{
@@ -249,26 +281,6 @@
 				{
 					"name": "comment.line.number-sign",
 					"match": "#.*"
-				}
-			]
-		},
-		"operators": {
-			"patterns": [
-				{
-					"match": "(==|!=|<=|>=|<|>)",
-					"name": "keyword.operator.comparison.generic-lang"
-				},
-				{
-					"match": "=|\\*=|-=|\\+=|\\^=|\\|=|%=|&=",
-					"name": "keyword.operator.assignment.generic-lang"
-				},
-				{
-					"match": "(\\+|-|\\*|\\/|\\^|\\*\\*|\\||%|&|\\/\\/)",
-					"name": "keyword.operator.arithmetic.generic-lang"
-				},
-				{
-					"match": "\\?|:",
-					"name": "keyword.operator.ternary.generic-lang"
 				}
 			]
 		},
