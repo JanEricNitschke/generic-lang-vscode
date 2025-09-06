@@ -31,34 +31,6 @@
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|foreach|return|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|yield|async|await|try|finally|throw)\\b"
-				},
-				{
-					"name": "keyword.control.decorator.generic-lang",
-					"match": "@"
-				},
-				{
-					"name": "constant.language.null.generic-lang",
-					"match": "\\b(nil|StopIteration)\\b"
-				},
-				{
-					"name": "constant.language.boolean.generic-lang",
-					"match": "\\b(true|false)\\b"
-				},
-				{
-					"name": "support.function.builtin.generic-lang",
-					"match": "\\b(print|str|type|clock|sqrt|input|int|is_int|float|rng|len|sleep|assert)\\b"
-				},
-				{
-					"name": "variable.language.generic-lang",
-					"match": "\\b(this|super|__name__)\\b"
-				}
-			]
-		},
 		"operators": {
 			"patterns": [
 				{
@@ -105,7 +77,7 @@
 					}
 				},
 				{
-					"match": "\\b(fun)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9_,\\s]*)\\)",
+					"match": "\\b(fun|gen)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\(([A-Za-z0-9_,\\s]*)\\)",
 					"captures": {
 						"1": {
 							"name": "storage.type.function.generic-lang"
@@ -289,6 +261,34 @@
 				{
 					"name": "entity.other.attribute-name.label.generic-lang",
 					"match": "'[A-Za-z_][A-Za-z0-9_]*\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.generic-lang",
+					"match": "\\b(if|else|while|for|foreach|return|yield|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|async|await|try|finally|throw|gen|fun)\\b"
+				},
+				{
+					"name": "keyword.control.decorator.generic-lang",
+					"match": "@"
+				},
+				{
+					"name": "constant.language.null.generic-lang",
+					"match": "\\b(nil|StopIteration)\\b"
+				},
+				{
+					"name": "constant.language.boolean.generic-lang",
+					"match": "\\b(true|false)\\b"
+				},
+				{
+					"name": "support.function.builtin.generic-lang",
+					"match": "\\b(print|str|type|clock|sqrt|input|int|is_int|float|rng|len|sleep|assert)\\b"
+				},
+				{
+					"name": "variable.language.generic-lang",
+					"match": "\\b(this|super|__name__)\\b"
 				}
 			]
 		}
