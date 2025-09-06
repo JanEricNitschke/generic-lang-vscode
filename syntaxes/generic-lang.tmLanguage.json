@@ -268,7 +268,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.generic-lang",
-					"match": "\\b(if|else|while|for|foreach|return|yield|and|or|in|break|continue|switch|case|default|unless|until|import|from|as|async|await|try|finally|throw|gen|fun)\\b"
+					"match": "\\b(if|else|while|for|foreach|return|yield|and|or|in|is|break|continue|switch|case|default|unless|until|import|from|as|async|await|try|finally|throw|gen|fun)\\b"
 				},
 				{
 					"name": "keyword.control.decorator.generic-lang",
