@@ -191,7 +191,7 @@
 			"patterns": [
 				{
 					"name": "string.quoted.double.interpolated.generic-lang",
-					"begin": "(f)(\")",
+					"begin": "(f|t)(\")",
 					"beginCaptures": {
 						"1": {
 							"name": "storage.type.string.f-prefix.generic-lang"
